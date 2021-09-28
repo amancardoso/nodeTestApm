@@ -1,7 +1,7 @@
 {
-  "name": "@risingstack/mqtt-garage-opener-example",
+  "name": "mqtt-server",
   "version": "1.0.0",
-  "description": "A sample application built that shows how MQTT could be used to manage a garage door system.",
+  "description": "A sample application built that shows how MQTT system with Orviwise network server.",
   "main": "controller.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/RisingStack/mqtt-garage-opener-example#readme",
   "dependencies": {
+    "moment-timezone": "^0.5.27",
     "mqtt": "^1.6.3"
   },
   "devDependencies": {
