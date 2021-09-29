@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/RisingStack/mqtt-garage-opener-example#readme",
   "dependencies": {
+    "elastic-apm-node": "^3.21.1",
     "moment-timezone": "^0.5.27",
     "mqtt": "^1.6.3"
   },

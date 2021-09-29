@@ -3,7 +3,22 @@ const moment = require('moment-timezone');
 const mqtt = require('mqtt');
 const client = mqtt.connect('mqtt://test-network-server.witac.co:1883', {qos: 0, username: 'witac', password: 'NNSXS.ACS22OFNWWRKWY7S627GXWLDAUOTQWLWFGXKLKY.V3ZBVB7VTIHSKJGQ6IDGTAKMNTTMKFO725PRNMU64KAHDLODIUMQ'});
 
+// Add this to the VERY top of the first file loaded in your app
+var apm = require('elastic-apm-node').start({
 
+  // Override the service name from package.json
+  // Allowed characters: a-z, A-Z, 0-9, -, _, and space
+  serviceName: 'nodeTestElk01',
+  
+  // Use if APM Server requires a secret token
+  secretToken: '',
+  
+  // Set the custom APM Server URL (default: http://localhost:8200)
+  serverUrl: 'http://localhost:8200',
+  
+  // Set the service environment
+  environment: 'production'
+  })
 /**
  * LISTENING TEST
  */
